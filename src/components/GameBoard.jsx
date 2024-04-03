@@ -34,7 +34,7 @@ export default function GameBoard({ onSelectSquare, turns }) {
         <li key={rowIndex}>
           <ol>
             {row.map((playerSymbol, colIndex) => (
-              <li id={colIndex}>
+              <li key={colIndex}>
                 <button onClick={() => onSelectSquare(rowIndex, colIndex)}>
                   {playerSymbol}
                 </button>
